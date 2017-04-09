@@ -1,76 +1,42 @@
 <html>
  <header>
+  <script>
+   var keyMerge = function(a, b){
+    var w = {};
+    Object.keys(a || {}).forEach(function(key){
+        w[key] = a[key]
+    })
+    Object.keys(b || {}).forEach(function(key){
+        w[key] = b[key]
+    })
+    return w
+   }
+   var baseoption = {
+    "width": 400,
+    "height": 200,
+    "interval": "30",
+    "timezone": "Asia/Tokyo",
+    "theme": "White",
+    "style": "1",
+    "locale": "ja",
+    "toolbar_bg": "#f1f3f6",
+    "enable_publishing": false,
+    "hide_top_toolbar": true,
+    "hideideas": true
+   }
+  </script>
   <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
  </header>
  <body>
 
-<script type="text/javascript">
-new TradingView.widget({
-  "width": 400,
-  "height": 200,
-  "symbol": "XRPBTC",
-  "interval": "30",
-  "timezone": "Asia/Tokyo",
-  "theme": "White",
-  "style": "1",
-  "locale": "ja",
-  "toolbar_bg": "#f1f3f6",
-  "enable_publishing": false,
-  "hide_top_toolbar": true,
-  "hideideas": true
-});
-</script>
+  <script type="text/javascript">
+new TradingView.widget(keyMerge({ "symbol": "XRPBTC" }, baseoption));
+new TradingView.widget(keyMerge({ "symbol": "ETHBTC" }, baseoption));
+new TradingView.widget(keyMerge({ "symbol": "LTCBTC" }, baseoption));
+new TradingView.widget(keyMerge({ "symbol": "XEMBTC" }, baseoption));
+new TradingView.widget(keyMerge({ "symbol": "FCTBTC" }, baseoption));
+  </script>
 
-<script type="text/javascript">
-new TradingView.widget({
-  "width": 400,
-  "height": 200,
-  "symbol": "ETHBTC",
-  "interval": "30",
-  "timezone": "Asia/Tokyo",
-  "theme": "White",
-  "style": "1",
-  "locale": "ja",
-  "toolbar_bg": "#f1f3f6",
-  "enable_publishing": false,
-  "hide_top_toolbar": true,
-  "hideideas": true
-});
-</script>
-
-<script type="text/javascript">
-new TradingView.widget({
-  "width": 400,
-  "height": 200,
-  "symbol": "LTCBTC",
-  "interval": "30",
-  "timezone": "Asia/Tokyo",
-  "theme": "White",
-  "style": "1",
-  "locale": "ja",
-  "toolbar_bg": "#f1f3f6",
-  "enable_publishing": false,
-  "hide_top_toolbar": true,
-  "hideideas": true
-});
-</script>
-  
-<script type="text/javascript">
-new TradingView.widget({
-  "width": 400,
-  "height": 200,
-  "symbol": "XEMBTC",
-  "interval": "30",
-  "timezone": "Asia/Tokyo",
-  "theme": "White",
-  "style": "1",
-  "locale": "ja",
-  "toolbar_bg": "#f1f3f6",
-  "enable_publishing": false,
-  "hide_top_toolbar": true,
-  "hideideas": true
-});
-</script>
 
  </body>
 </html>
