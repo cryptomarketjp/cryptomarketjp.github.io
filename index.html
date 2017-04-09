@@ -4,10 +4,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>仮想通貨チャート一覧</title>
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
   <script>
    var keyMerge = function(a, b){
     var w = {};
@@ -35,16 +35,39 @@
   </script>
  </head>
  <body>
-  
-<div class="container">
-  <div class="row">
-    <div class="col-sm-3 col-xs-6"><script type="text/javascript">new TradingView.widget(keyMerge({ "symbol": "POLONIEX:XRPBTC" }, baseoption));</script></div>
-    <div class="col-sm-3 col-xs-6"><script type="text/javascript">new TradingView.widget(keyMerge({ "symbol": "POLONIEX:ETHBTC" }, baseoption));</script></div>
-    <div class="col-sm-3 col-xs-6"><script type="text/javascript">new TradingView.widget(keyMerge({ "symbol": "POLONIEX:LTCBTC" }, baseoption));</script></div>
-    <div class="col-sm-3 col-xs-6"><script type="text/javascript">new TradingView.widget(keyMerge({ "symbol": "POLONIEX:XEMBTC" }, baseoption));</script></div>
-    <div class="col-sm-3 col-xs-6"><script type="text/javascript">new TradingView.widget(keyMerge({ "symbol": "POLONIEX:FCTBTC" }, baseoption));</script></div>
-  </div>
-</div>
-
+  <table class="table">
+    <tbody>
+      <tr>
+        <th scope="row">BTC</th>
+        <td><script type="text/javascript">new TradingView.widget(keyMerge({ "symbol": "BITFINEX:BTCUSD" }, baseoption));</script></td>
+        <td><script type="text/javascript">new TradingView.widget(keyMerge({ "symbol": "BITSTAMP:BTCUSD" }, baseoption));</script></td>
+        <td><script type="text/javascript">new TradingView.widget(keyMerge({ "symbol": "OKCOIN:BTCUSD" }, baseoption));</script></td>
+      </tr>
+      <tr>
+        <th scope="row">LTC</th>
+        <td><script type="text/javascript">new TradingView.widget(keyMerge({ "symbol": "POLONIEX:LTCBTC" }, baseoption));</script></td>
+        <td><script type="text/javascript">new TradingView.widget(keyMerge({ "symbol": "BITFINEX:LTCBTC" }, baseoption));</script></td>
+        <td><script type="text/javascript">new TradingView.widget(keyMerge({ "symbol": "OKCOIN:LTCUSD" }, baseoption));</script></td>
+      </tr>
+      <tr>
+        <th scope="row">XRP</th>
+        <td><script type="text/javascript">new TradingView.widget(keyMerge({ "symbol": "POLONIEX:XRPBTC" }, baseoption));</script></td>
+        <td><script type="text/javascript">new TradingView.widget(keyMerge({ "symbol": "KRAKEN:XRPXBT" }, baseoption));</script></td>
+        <td><script type="text/javascript">new TradingView.widget(keyMerge({ "symbol": "POLONIEX:XRPUSDT" }, baseoption));</script></td>
+      </tr>
+      <tr>
+        <th scope="row">ETH</th>
+        <td><script type="text/javascript">new TradingView.widget(keyMerge({ "symbol": "POLONIEX:ETHBTC" }, baseoption));</script></td>
+        <td><script type="text/javascript">new TradingView.widget(keyMerge({ "symbol": "BITFINEX:ETHBTC" }, baseoption));</script></td>
+        <td><script type="text/javascript">new TradingView.widget(keyMerge({ "symbol": "BITFINEX:ETHUSD" }, baseoption));</script></td>
+      </tr>
+      <tr>
+        <th scope="row">OTHER</th>
+        <td><script type="text/javascript">new TradingView.widget(keyMerge({ "symbol": "POLONIEX:XEMBTC" }, baseoption));</script></td>
+        <td><script type="text/javascript">new TradingView.widget(keyMerge({ "symbol": "POLONIEX:FCTBTC" }, baseoption));</script></td>
+        <td><script type="text/javascript">new TradingView.widget(keyMerge({ "symbol": "POLONIEX:STRBTC" }, baseoption));</script></td>
+      </tr>
+    </tbody>
+  </table>
  </body>
 </html>
