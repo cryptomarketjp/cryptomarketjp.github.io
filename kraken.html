@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+ <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>仮想通貨チャート一覧「kraken貸借銘柄」</title>
+  <meta name="Keywords" content="ビットコイン,リップル,イーサーリアム,仮想通貨,チャート,bitcoin,ripple,ethereum" />
+  <meta name="Description" content="ビットコインなどの仮想通貨のチャートを一覧で表示し日中の動きを監視できます" />
+  <meta property="og:title" content="ビットコイン｜チャート">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/">
+  <meta property="og:description" content="仮想通貨のチャートを一覧表示">
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+  <script>
+   var keyMerge = function(a, b){
+    var w = {};
+    Object.keys(a || {}).forEach(function(key){
+        w[key] = a[key]
+    })
+    Object.keys(b || {}).forEach(function(key){
+        w[key] = b[key]
+    })
+    return w
+   }
+   var baseoption = {
+    "width": 400,
+    "height": 200,
+    "interval": "30",
+    "timezone": "Asia/Tokyo",
+    "theme": "White",
+    "style": "1",
+    "locale": "ja",
+    "toolbar_bg": "#f1f3f6",
+    "enable_publishing": false,
+    "hide_top_toolbar": true,
+    "hideideas": true
+   }
+   var TV = function(symbol){
+     return new TradingView.widget(keyMerge({ "symbol": symbol }, baseoption));
+   }
+  </script>
+ </head>
+ <body>
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-46649320-4', 'auto');
+   ga('send', 'pageview');
+  </script>
+  <table class="table">
+    <tbody>
+      <tr>
+        <th scope="row">BTC</th>
+        <td><script>TV("KRAKEN:XBTUSD");</script></td>
+        <td><script>TV("KRAKEN:XBTEUR");</script></td>
+        <td><script>TV("KRAKEN:XBTJPY");</script></td>
+      </tr>
+      <tr>
+        <th scope="row">XLM</th>
+        <td><script>TV("KRAKEN:XLMUSD");</script></td>
+        <td><script>TV("KRAKEN:XLMEUR");</script></td>
+        <td><script>TV("KRAKEN:XLMXBT");</script></td>
+      </tr>
+      <tr>
+        <th scope="row">ETH</th>
+        <td><script>TV("KRAKEN:ETHUSD");</script></td>
+        <td><script>TV("KRAKEN:ETHEUR");</script></td>
+        <td><script>TV("KRAKEN:ETHXBT");</script></td>
+      </tr>
+      <tr>
+        <th scope="row">MISC</th>
+        <td><script>TV("KRAKEN:XRPXBT");</script></td>
+        <td><script>TV("KRAKEN:XDGXBT");</script></td>
+        <td><script>TV("KRAKEN:ZECXBT");</script></td>
+      </tr>
+    </tbody>
+  </table>
+  <a href="/">主要銘柄チャート</a><br/>
+  <a href="polo_margin.html">poloniexの貸借銘柄チャート</a><br/>
+  <a href="polo_margin_jpy.html">poloniexの貸借銘柄チャート(円建て)</a><br/>
+  <a href="crosspair.html">クロスペアのチャート</a><br/>
+ </body>
+</html>
